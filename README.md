@@ -34,7 +34,7 @@ Display freezes if xserver display settings are not disabled precisely
 
 #  Solution for installing CUDA
 
-- Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the follow- ing contents:  blacklist nouveau options nouveau modeset=0
+# Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the follow- ing contents:  blacklist nouveau options nouveau modeset=0
 		$ sudo update-initramfs -u
 		$ sudo reboot
 
@@ -44,7 +44,7 @@ Display freezes if xserver display settings are not disabled precisely
 		$ sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
 		$ sudo apt-get update
 		$ sudo apt-get install cuda
-`#	POST INSTALLATION:
+`# POST INSTALLATION:
 	Copy the samples from cuda(usr/local/cuda)
 	paste in home directory
 	go to device query 
