@@ -65,4 +65,6 @@ The order of versions has to be installed:
 
 		$sudo pip install tensorflow(CPU support)
 		$sudo pip install tensorflow-gpu(GPU support)
+# To install opencv use the below link
+	https://github.com/arunodhayan/HaarCascade-Trained-to-detect-my-Watch-/blob/master/Install_opencv.md
 
