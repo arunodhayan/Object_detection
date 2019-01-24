@@ -1,14 +1,6 @@
-# Object_detection
-# Nvidia setup:
-# Error in Nvidia driver:
 
-- nvidia-smi command not found
-
-- driver not upto date
-
-- failed to initialize NVML: Driver/library version mismatch
-
-# Solution for installing Nvidia Driver 
+# Cuda installation
+#  Installing Nvidia Driver 
   # Method 1 :
 
 -  Download  directly  from  the  Nvidia  website  [Nvi]  according  to  the  GPU
@@ -25,10 +17,11 @@
 	$ sudo add-apt-repository ppa:graphics-drivers/ppa
 	$ sudo apt-get update
 	$ sudo apt-get install nvidia-(driver version)
+	
+	After this reboot the pc then open terminal and type nvidia-smi
+	a display in the terminal with driver version ill be displayed
 
-#  Error in CUDA
 
-	nvcc –version :  command not found
 
 
 
@@ -65,6 +58,7 @@
 	make
 	./devicequery
 	result:Pass
+	After this type nvcc --version  in terminal you will get the cuda version if this displayes success
 
 # Installing CUDNN
 
