@@ -12,14 +12,14 @@
   # Method 1 :
 
 -  Download  directly  from  the  Nvidia  website  [Nvi]  according  to  the  GPU
-processor.http://www.nvidia.de/Download/index.aspx
+   processor.http://www.nvidia.de/Download/index.aspx
 
 - Then go to boot menu and disable the secured boot then in terminal
 
 		$ chmod +x Nvidia driver
 		$ sudo ./nvidia driver
 
-# Method 2 :  In Terminal window(Recomended)
+# Method 2 :  In Terminal window(Recommended)
 
 	$ sudo apt-get purge nvidia*
 	$ sudo add-apt-repository ppa:graphics-drivers/ppa
@@ -30,41 +30,31 @@ processor.http://www.nvidia.de/Download/index.aspx
 
 	nvcc –version :  command not found
 
-Display freezes if xserver display settings are not disabled precisely
 
-#  Solution for installing CUDA
 
-Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the follow- ing contents:  
-copy this and paste in it:blacklist nouveau options nouveau modeset=0
+#  Manditory step before installing cuda
+
+	Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the follow- ing contents:  
+	copy this and paste in it:
+	blacklist nouveau options nouveau modeset=0
 		$ sudo update-initramfs -u
 		$ sudo reboot
+# Download link for cuda
+	https://developer.nvidia.com/cuda-toolkit-archive
 
-# check cuda directory path in /.bashrc file (recommended)
 #  Install nvidia CUDA
 		$ sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
 		$ sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
 		$ sudo apt-get update
 		$ sudo apt-get install cuda
 # Manditory task to add in bashrc file
-Type nano ~/.bashrc in terminal
-paste the required path read the below
-After pasting type source ~/.bashrc
-The PATH variable needs to include /usr/local/cuda-9.0/bin
-
-To add this path to the PATH variable:
-
-$ export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
-In addition, when using the runfile installation method, the LD_LIBRARY_PATH variable needs to contain /usr/local/cuda-10.0/lib64 on a 64-bit system, or /usr/local/cuda-9.0/lib on a 32-bit system
-
-To change the environment variables for 64-bit operating systems:
-
-$ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64\
-                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-To change the environment variables for 32-bit operating systems:
-
-$ export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib\
-                         ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-Note that the above paths change when using a custom install path with the runfile installation method.
+	1.Type nano ~/.bashrc in terminal
+	2.paste the required path  the below
+		#cuda
+		export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
+		export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib64\${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+	3.After pasting type source ~/.bashrc
+       	
 # POST INSTALLATION:
 
 	Copy the samples from cuda(usr/local/cuda)
