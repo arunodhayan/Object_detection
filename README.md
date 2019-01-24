@@ -34,7 +34,8 @@
 
 #  Manditory step before installing cuda
 
-	Create a file at /etc/modprobe.d/blacklist-nouveau.conf with the follow- ing contents:  
+	Create a file at
+	sudo nano /etc/modprobe.d/blacklist-nouveau.conf   
 	copy this and paste in it:
 	blacklist nouveau options nouveau modeset=0
 		$ sudo update-initramfs -u
