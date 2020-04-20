@@ -16,7 +16,7 @@
 	$ sudo apt-get purge nvidia*
 	$ sudo add-apt-repository ppa:graphics-drivers/ppa
 	$ sudo apt-get update
-	$ sudo apt-get install nvidia-(driver version)
+	$ sudo apt-get install nvidia-driver-440
 	
 	After this reboot the pc then open terminal and type nvidia-smi
 	a display in the terminal with driver version ill be displayed
