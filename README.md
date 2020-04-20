@@ -64,9 +64,9 @@
 
 The order of versions has to be installed:
 
-		$ sudo dpkg -i libcudnn7 7.0.3.11-1+cuda9.0 amd64.deb
-		$ sudo dpkg -i libcudnn7-dev 7.0.3.11-1+cuda9.0 amd64.deb
-		$ sudo dpkg -i libcudnn7-doc 7.0.3.11-1+cuda9.0 amd64.deb
+		$ sudo dpkg -i libcudnn7 7.6.2.11-1+cuda9.0 amd64.deb
+		$ sudo dpkg -i libcudnn7-dev 7.6.2.11-1+cuda9.0 amd64.deb
+		$ sudo dpkg -i libcudnn7-doc 7.6.2.11-1+cuda9.0 amd64.deb
 		
 # Post Installation
 		$ cp -r /usr/src/cudnn_samples_v7/ $HOME
